@@ -1,5 +1,7 @@
 # @neogate/mcp
 
+**English** · [Русский](README.ru.md)
+
 An [MCP](https://modelcontextprotocol.io) server for Neogate. Ask your agent "are we under attack?", "what was that spike at 3 am?", "why can this customer not open the site?" and it reads the real data.
 
 It speaks plain MCP over stdio, so it works with any client that does: Claude Code and Desktop, Codex, Cursor, Antigravity, Gemini CLI, VS Code, Windsurf, Zed and the rest.
