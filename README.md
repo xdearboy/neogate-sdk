@@ -6,8 +6,8 @@ Everything for driving [Neogate](https://neogate.systems) from code and from AI 
 
 | | |
 |---|---|
-| [`packages/sdk`](packages/sdk) | `@neogate/sdk`: typed TypeScript client for the panel API. No dependencies, works in Node 20+ and Bun. |
-| [`packages/mcp`](packages/mcp) | `@neogate/mcp`: an MCP server for any MCP client (Claude, Codex, Cursor, Antigravity, Gemini CLI, VS Code…), so an agent can read attacks and traffic and, when you allow it, change protection. |
+| [`packages/sdk`](packages/sdk) | `neogate-sdk`: typed TypeScript client for the panel API. No dependencies, works in Node 20+ and Bun. |
+| [`packages/mcp`](packages/mcp) | `neogate-mcp`: an MCP server for any MCP client (Claude, Codex, Cursor, Antigravity, Gemini CLI, VS Code…), so an agent can read attacks and traffic and, when you allow it, change protection. |
 | [`skills/`](skills) | Playbooks for the common jobs: attack triage, "why can this visitor not get in", connecting a domain, the weekly review. Claude Code skills, plus [`AGENTS.md`](skills/AGENTS.md) for every other agent. |
 
 ## Start
@@ -16,7 +16,7 @@ Everything for driving [Neogate](https://neogate.systems) from code and from AI 
 2. Pick your way in:
 
 ```ts
-import { Neogate } from '@neogate/sdk';
+import { Neogate } from 'neogate-sdk';
 
 const neogate = new Neogate({ token: process.env.NEOGATE_TOKEN });
 const [project] = await neogate.projects.list();
@@ -25,9 +25,9 @@ console.log(await neogate.projects.overview(project.id));
 
 ```sh
 # Claude Code
-claude mcp add neogate -e NEOGATE_TOKEN=ngt_… -- npx -y @neogate/mcp
+claude mcp add neogate -e NEOGATE_TOKEN=ngt_… -- npx -y neogate-mcp
 # Codex
-codex mcp add neogate --env NEOGATE_TOKEN=ngt_… -- npx -y @neogate/mcp
+codex mcp add neogate --env NEOGATE_TOKEN=ngt_… -- npx -y neogate-mcp
 ```
 
 Cursor, Antigravity, VS Code and the rest: see [`packages/mcp`](packages/mcp#install).

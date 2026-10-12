@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import { StdioServerTransport } from '@modelcontextprotocol/sdk/server/stdio.js';
-import { Neogate } from '@neogate/sdk';
+import { Neogate } from 'neogate-sdk';
 import { createServer, SERVER_VERSION } from './server.js';
 
 const HELP = `neogate-mcp ${SERVER_VERSION}: Neogate for Claude and other MCP clients (stdio)
@@ -11,8 +11,8 @@ const HELP = `neogate-mcp ${SERVER_VERSION}: Neogate for Claude and other MCP cl
   --allow-write   also expose the tools that change settings (needs a write token)
   --help          this text
 
-Claude Code:  claude mcp add neogate -e NEOGATE_TOKEN=ngt_… -- npx -y @neogate/mcp
-Codex:        codex mcp add neogate --env NEOGATE_TOKEN=ngt_… -- npx -y @neogate/mcp
+Claude Code:  claude mcp add neogate -e NEOGATE_TOKEN=ngt_… -- npx -y neogate-mcp
+Codex:        codex mcp add neogate --env NEOGATE_TOKEN=ngt_… -- npx -y neogate-mcp
 Others:       docs in the package README (Cursor, Antigravity, VS Code, Gemini CLI…)
 `;
 

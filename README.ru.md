@@ -6,8 +6,8 @@
 
 | | |
 |---|---|
-| [`packages/sdk`](packages/sdk) | `@neogate/sdk`: типизированный TypeScript-клиент API панели. Без зависимостей, работает в Node 20+ и Bun. |
-| [`packages/mcp`](packages/mcp) | `@neogate/mcp`: MCP-сервер для любого MCP-клиента (Claude, Codex, Cursor, Antigravity, Gemini CLI, VS Code…). Агент читает атаки и трафик и, если вы разрешите, меняет защиту. |
+| [`packages/sdk`](packages/sdk) | `neogate-sdk`: типизированный TypeScript-клиент API панели. Без зависимостей, работает в Node 20+ и Bun. |
+| [`packages/mcp`](packages/mcp) | `neogate-mcp`: MCP-сервер для любого MCP-клиента (Claude, Codex, Cursor, Antigravity, Gemini CLI, VS Code…). Агент читает атаки и трафик и, если вы разрешите, меняет защиту. |
 | [`skills/`](skills) | Готовые сценарии: разбор атаки, «почему посетитель не может зайти», подключение домена, недельный обзор. Скиллы для Claude Code и [`AGENTS.md`](skills/AGENTS.md) для всех остальных агентов. |
 
 ## Быстрый старт
@@ -16,7 +16,7 @@
 2. Подключитесь:
 
 ```ts
-import { Neogate } from '@neogate/sdk';
+import { Neogate } from 'neogate-sdk';
 
 const neogate = new Neogate({ token: process.env.NEOGATE_TOKEN });
 const [project] = await neogate.projects.list();
@@ -25,9 +25,9 @@ console.log(await neogate.projects.overview(project.id));
 
 ```sh
 # Claude Code
-claude mcp add neogate -e NEOGATE_TOKEN=ngt_… -- npx -y @neogate/mcp
+claude mcp add neogate -e NEOGATE_TOKEN=ngt_… -- npx -y neogate-mcp
 # Codex
-codex mcp add neogate --env NEOGATE_TOKEN=ngt_… -- npx -y @neogate/mcp
+codex mcp add neogate --env NEOGATE_TOKEN=ngt_… -- npx -y neogate-mcp
 ```
 
 Cursor, Antigravity, VS Code и остальные: [`packages/mcp`](packages/mcp/README.ru.md#установка).

@@ -1,4 +1,4 @@
-import type { Attack, AttackDetails, CodeCount, Point } from '@neogate/sdk';
+import type { Attack, AttackDetails, CodeCount, Point } from 'neogate-sdk';
 
 const top = <T>(list: T[] | undefined, n = 5): T[] => (list ?? []).slice(0, n);
 

@@ -1,5 +1,5 @@
 import { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js';
-import type { Neogate } from '@neogate/sdk';
+import type { Neogate } from 'neogate-sdk';
 import { registerPrompts } from './prompts.js';
 import { readTools } from './tools/read.js';
 import { writeTools } from './tools/write.js';

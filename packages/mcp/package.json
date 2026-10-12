@@ -1,5 +1,5 @@
 {
-  "name": "@neogate/mcp",
+  "name": "neogate-mcp",
   "version": "0.1.0",
   "description": "MCP server for Neogate: let Claude and other agents read attacks, traffic and protection settings",
   "license": "MIT",
@@ -23,7 +23,7 @@
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.20.0",
-    "@neogate/sdk": "workspace:*",
+    "neogate-sdk": "workspace:*",
     "zod": "^3.25.0"
   },
   "devDependencies": {

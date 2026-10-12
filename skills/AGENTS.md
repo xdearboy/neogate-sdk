@@ -1,6 +1,6 @@
 # Neogate playbooks
 
-For any agent with the `neogate` MCP server connected (`@neogate/mcp`). Paste into a project's `AGENTS.md`, Cursor rules, a Codex prompt or an Antigravity rule. The same four workflows are Claude Code skills in the folders next to this file.
+For any agent with the `neogate` MCP server connected (`neogate-mcp`). Paste into a project's `AGENTS.md`, Cursor rules, a Codex prompt or an Antigravity rule. The same four workflows are Claude Code skills in the folders next to this file.
 
 General rules: answer in the user's language, plainly. Read before you change anything, say what you will change before you change it, and never change settings the user did not ask about. Start with `list_projects`: every other tool takes an id from it.
 

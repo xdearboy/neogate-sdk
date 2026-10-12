@@ -1,5 +1,5 @@
 {
-  "name": "@neogate/sdk",
+  "name": "neogate-sdk",
   "version": "0.1.0",
   "description": "TypeScript client for the Neogate DDoS-protection panel API",
   "license": "MIT",

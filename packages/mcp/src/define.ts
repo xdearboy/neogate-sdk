@@ -1,7 +1,7 @@
 import type { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js';
 import type { CallToolResult } from '@modelcontextprotocol/sdk/types.js';
 import { z, type ZodRawShape } from 'zod';
-import { ApiError, AuthenticationError, NetworkError, NeogateError, PermissionError } from '@neogate/sdk';
+import { ApiError, AuthenticationError, NetworkError, NeogateError, PermissionError } from 'neogate-sdk';
 
 export interface ToolDef<S extends ZodRawShape> {
   name: string;

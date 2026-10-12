@@ -1,6 +1,6 @@
 import type { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js';
 import { z } from 'zod';
-import type { Neogate } from '@neogate/sdk';
+import type { Neogate } from 'neogate-sdk';
 import { defineTool } from '../define.js';
 
 export function writeTools(server: McpServer, ng: Neogate): void {

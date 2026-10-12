@@ -1,7 +1,7 @@
 import { afterEach, describe, expect, test } from 'bun:test';
 import { Client } from '@modelcontextprotocol/sdk/client/index.js';
 import { InMemoryTransport } from '@modelcontextprotocol/sdk/inMemory.js';
-import { Neogate } from '@neogate/sdk';
+import { Neogate } from 'neogate-sdk';
 import { createServer } from '../src/index.js';
 
 function panel(routes: Record<string, unknown | ((init: RequestInit) => Response)>) {

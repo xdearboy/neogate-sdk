@@ -1,4 +1,4 @@
-# @neogate/mcp
+# neogate-mcp
 
 **English** · [Русский](README.ru.md)
 
@@ -8,18 +8,18 @@ It speaks plain MCP over stdio, so it works with any client that does: Claude Co
 
 ## Install
 
-Make a token in the panel (**аккаунт → API-токены**), then add the server to your client. The command is always `npx -y @neogate/mcp` with `NEOGATE_TOKEN` in its environment.
+Make a token in the panel (**аккаунт → API-токены**), then add the server to your client. The command is always `npx -y neogate-mcp` with `NEOGATE_TOKEN` in its environment.
 
 **Claude Code**
 
 ```sh
-claude mcp add neogate -e NEOGATE_TOKEN=ngt_… -- npx -y @neogate/mcp
+claude mcp add neogate -e NEOGATE_TOKEN=ngt_… -- npx -y neogate-mcp
 ```
 
 **Codex** (CLI or IDE)
 
 ```sh
-codex mcp add neogate --env NEOGATE_TOKEN=ngt_… -- npx -y @neogate/mcp
+codex mcp add neogate --env NEOGATE_TOKEN=ngt_… -- npx -y neogate-mcp
 ```
 
 or in `~/.codex/config.toml`:
@@ -27,7 +27,7 @@ or in `~/.codex/config.toml`:
 ```toml
 [mcp_servers.neogate]
 command = "npx"
-args = ["-y", "@neogate/mcp"]
+args = ["-y", "neogate-mcp"]
 
 [mcp_servers.neogate.env]
 NEOGATE_TOKEN = "ngt_…"
@@ -36,13 +36,13 @@ NEOGATE_TOKEN = "ngt_…"
 **Antigravity** (CLI; the IDE reads the same `~/.gemini/config/mcp_config.json`). Flags go before the name:
 
 ```sh
-agy mcp add --env NEOGATE_TOKEN=ngt_… neogate npx -y @neogate/mcp
+agy mcp add --env NEOGATE_TOKEN=ngt_… neogate npx -y neogate-mcp
 ```
 
 **Gemini CLI**
 
 ```sh
-gemini mcp add -s user -e NEOGATE_TOKEN=ngt_… neogate npx -y @neogate/mcp
+gemini mcp add -s user -e NEOGATE_TOKEN=ngt_… neogate npx -y neogate-mcp
 ```
 
 **Cursor** (`~/.cursor/mcp.json`, or `.cursor/mcp.json` in a project). Cursor expands `${env:NAME}`, so the token can stay in your environment:
@@ -53,7 +53,7 @@ gemini mcp add -s user -e NEOGATE_TOKEN=ngt_… neogate npx -y @neogate/mcp
     "neogate": {
       "type": "stdio",
       "command": "npx",
-      "args": ["-y", "@neogate/mcp"],
+      "args": ["-y", "neogate-mcp"],
       "env": { "NEOGATE_TOKEN": "${env:NEOGATE_TOKEN}" }
     }
   }
@@ -67,7 +67,7 @@ gemini mcp add -s user -e NEOGATE_TOKEN=ngt_… neogate npx -y @neogate/mcp
   "mcpServers": {
     "neogate": {
       "command": "npx",
-      "args": ["-y", "@neogate/mcp"],
+      "args": ["-y", "neogate-mcp"],
       "env": { "NEOGATE_TOKEN": "ngt_…" }
     }
   }
@@ -82,7 +82,7 @@ gemini mcp add -s user -e NEOGATE_TOKEN=ngt_… neogate npx -y @neogate/mcp
     "neogate": {
       "type": "stdio",
       "command": "npx",
-      "args": ["-y", "@neogate/mcp"],
+      "args": ["-y", "neogate-mcp"],
       "env": { "NEOGATE_TOKEN": "ngt_…" }
     }
   }
@@ -100,7 +100,7 @@ Claude Code reads the [`skills/`](../../skills) folder. Other agents can use [`s
 Without `--allow-write` the server registers no tool that can change anything. To let an agent connect domains and tune protection, use a *write* token **and** add the flag:
 
 ```sh
-claude mcp add neogate -e NEOGATE_TOKEN=ngt_… -- npx -y @neogate/mcp --allow-write
+claude mcp add neogate -e NEOGATE_TOKEN=ngt_… -- npx -y neogate-mcp --allow-write
 ```
 
 Both are needed on purpose: the flag decides what the model is offered, the token decides what the panel permits. There is no delete tool.

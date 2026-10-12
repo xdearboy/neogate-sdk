@@ -1,15 +1,15 @@
-# @neogate/sdk
+# neogate-sdk
 
 **English** · [Русский](README.ru.md)
 
 TypeScript client for the Neogate panel API. Zero dependencies; Node 20+ and Bun (tested). It uses only `fetch` and `AbortSignal`, so other modern runtimes should work too.
 
 ```sh
-npm i @neogate/sdk
+npm i neogate-sdk
 ```
 
 ```ts
-import { Neogate, PermissionError } from '@neogate/sdk';
+import { Neogate, PermissionError } from 'neogate-sdk';
 
 const neogate = new Neogate({ token: process.env.NEOGATE_TOKEN }); // ngt_…
 
